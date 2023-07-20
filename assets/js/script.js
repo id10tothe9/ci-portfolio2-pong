@@ -88,6 +88,18 @@ function moveBall(gameObjects,gameArea,ball,paddleLeft,paddleRight,ballElement,p
   
   }
 
+  function reflectBall(ball,paddle,paddleElement) {
+    let score = 'no';
+    let paddleTop = parseFloat(getComputedStyle(paddleElement).top);
+    let paddleBottom = paddleTop + paddle.height;
+    if (ball.top >= paddleTop && ball.top <= paddleBottom) {
+      ball.x *= -1;
+    } else {
+      score = 'yes';
+    }
+    return [score, ball];
+  }
+
 function startComputerPlayer(gameObjects, gameArea, ball, paddleLeft, paddleRight, ballElement, paddleLeftElement, paddleRightElement) {
     // determine Y of ball in a cyclical manner (cycle period can change with difficulty)
     // -> move paddle in correct direction with a given speed (game difficulty)
