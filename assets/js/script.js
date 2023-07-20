@@ -46,9 +46,47 @@ function startGame(gameObjects) {
         // Give computer control of the left paddle
         let idsComputer = startComputerPlayer(gameObjects, ...gameObjects);
 
+
+        let idBall = setInterval(function () {
+            moveBall(gameObjects, ...gameObjects, idBall, idsComputer);
+        }, 1);
+
     }, 4000);
 
 }
+
+function moveBall(gameObjects,gameArea,ball,paddleLeft,paddleRight,ballElement,paddleLeftElement,paddleRightElement,idBall,idsComputer) {
+
+    // Reflection or score conditions
+    if (ball.left > gameArea.width) {
+      let score = 'no';
+      [score, ball] = reflectBall(ball, paddleRight, paddleRightElement);
+      if (score === 'yes') {
+        endRound('right',idBall, ...idsComputer);
+        ballElement.style.display = 'none';
+      }
+    }
+  
+    if (ball.left < 0) {
+      let score = 'no';
+      [score, ball] = reflectBall(ball, paddleLeft, paddleLeftElement);
+      if (score === 'yes') {
+        endRound('left',idBall, ...idsComputer);
+        ballElement.style.display = 'none';
+      }
+    }
+  
+    if (ball.top < 0 || ball.top > gameArea.height) {
+      ball.y *= -1;
+    }
+  
+    // Move ball one step
+    ball.left += ball.x;
+    ball.top += ball.y;
+    ballElement.style.left = `${ball.left}px`;
+    ballElement.style.top = `${ball.top}px`;
+  
+  }
 
 function startComputerPlayer(gameObjects, gameArea, ball, paddleLeft, paddleRight, ballElement, paddleLeftElement, paddleRightElement) {
     // determine Y of ball in a cyclical manner (cycle period can change with difficulty)
