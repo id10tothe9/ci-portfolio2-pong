@@ -55,67 +55,67 @@ function startGame(gameObjects) {
 
 }
 
-function moveBall(gameObjects,gameArea,ball,paddleLeft,paddleRight,ballElement,paddleLeftElement,paddleRightElement,idBall,idsComputer) {
+function moveBall(gameObjects, gameArea, ball, paddleLeft, paddleRight, ballElement, paddleLeftElement, paddleRightElement, idBall, idsComputer) {
 
     // Reflection or score conditions
     if (ball.left > gameArea.width) {
-      let score = 'no';
-      [score, ball] = reflectBall(ball, paddleRight, paddleRightElement);
-      if (score === 'yes') {
-        endRound('right',idBall, ...idsComputer);
-        ballElement.style.display = 'none';
-      }
+        let score = 'no';
+        [score, ball] = reflectBall(ball, paddleRight, paddleRightElement);
+        if (score === 'yes') {
+            endRound('right', idBall, ...idsComputer);
+            ballElement.style.display = 'none';
+        }
     }
-  
+
     if (ball.left < 0) {
-      let score = 'no';
-      [score, ball] = reflectBall(ball, paddleLeft, paddleLeftElement);
-      if (score === 'yes') {
-        endRound('left',idBall, ...idsComputer);
-        ballElement.style.display = 'none';
-      }
+        let score = 'no';
+        [score, ball] = reflectBall(ball, paddleLeft, paddleLeftElement);
+        if (score === 'yes') {
+            endRound('left', idBall, ...idsComputer);
+            ballElement.style.display = 'none';
+        }
     }
-  
+
     if (ball.top < 0 || ball.top > gameArea.height) {
-      ball.y *= -1;
+        ball.y *= -1;
     }
-  
+
     // Move ball one step
     ball.left += ball.x;
     ball.top += ball.y;
     ballElement.style.left = `${ball.left}px`;
     ballElement.style.top = `${ball.top}px`;
-  
-  }
 
-  function reflectBall(ball,paddle,paddleElement) {
+}
+
+function reflectBall(ball, paddle, paddleElement) {
     let score = 'no';
     let paddleTop = parseFloat(getComputedStyle(paddleElement).top);
     let paddleBottom = paddleTop + paddle.height;
     if (ball.top >= paddleTop && ball.top <= paddleBottom) {
-      ball.x *= -1;
+        ball.x *= -1;
     } else {
-      score = 'yes';
+        score = 'yes';
     }
     return [score, ball];
-  }
+}
 
 
-  function endRound(side,id1,id2,id3) {
+function endRound(side, id1, id2, id3) {
     clearInterval(id1);
     clearInterval(id2);
     clearInterval(id3);
     let score = document.getElementById('timer-display');
     switch (side) {
-      case 'right':
-        score.textContent = 'Computer Wins!';
-        break;
-      case 'left':
-        score.textContent = 'You Win!'
-        break;
+        case 'right':
+            score.textContent = 'Computer Wins!';
+            break;
+        case 'left':
+            score.textContent = 'You Win!'
+            break;
     }
-  }
-  
+}
+
 
 function startComputerPlayer(gameObjects, gameArea, ball, paddleLeft, paddleRight, ballElement, paddleLeftElement, paddleRightElement) {
     // determine Y of ball in a cyclical manner (cycle period can change with difficulty)
