@@ -40,6 +40,11 @@ function startGame(gameObjects) {
     document.getElementById('timer-display').textContent = '';
     // Count down then start game
     countDown();
+    setTimeout(function () {
+        // Set start position of ball and add momentum to its object
+        ball = startBall(gameObjects, ...gameObjects);
+    }, 4000);
+
 }
 
 function countDown() {
@@ -110,3 +115,25 @@ function getDimensions(divElement) {
     div.height = parseFloat(divStyle.height);
     return div;
 }
+
+// Set position and momentum of ball at start of the game
+function startBall(gameObjects, gameArea, ball, paddleLeft, paddleRight, ballElement, paddleLeftElement, paddleRightElement) {
+    // Position the ball at the middle top of the gameArea
+    ball.left = gameArea.width / 2 - ball.width / 2;
+    ball.top = 0;
+    ballElement.style.left = `${ball.left}px`;
+    ballElement.style.top = `${ball.top}px`
+    // Make ball visible
+    ballElement.style.display = 'block';
+
+    // Give ball object its momentum as x,y in pixel (with 0 defined
+    // at top left of the gameArea) and ball moving diagonally
+    let x = 0.2;
+    let y = gameArea.height / gameArea.width * x;
+    ball.x = x;
+    // ball.y = y;
+    ball.y = 0.05;
+
+    return ball;
+}
+  /** Assistant Functions - End ***************************************** */
