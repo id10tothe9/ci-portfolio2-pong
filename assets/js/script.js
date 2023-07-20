@@ -25,9 +25,41 @@ window.addEventListener('DOMContentLoaded', function () {
         movePlayerPaddle(event.changedTouches[0], gameObjects, ...gameObjects);
     });
 
+
+    // Initiate start button
+    document.getElementById('start').addEventListener('click', function () {
+        startGame(gameObjects);
+    });
+
 });
 /** Initiation - End ***************************************** */
 
+
+function startGame(gameObjects) {
+    // Reset timer-display
+    document.getElementById('timer-display').textContent = '';
+    // Count down then start game
+    countDown();
+}
+
+function countDown() {
+    let timerDisplay = document.getElementById('timer-display');
+    setTimeout(function () {
+        timerDisplay.textContent = '3'
+    }, 1000);
+    setTimeout(function () {
+        timerDisplay.textContent = '2'
+    }, 2000);
+    setTimeout(function () {
+        timerDisplay.textContent = '1'
+    }, 3000);
+    setTimeout(function () {
+        timerDisplay.textContent = 'GO!'
+    }, 4000);
+    setTimeout(function () {
+        timerDisplay.textContent = ''
+    }, 5000);
+}
 
 
 function movePlayerPaddle(event, gameObjects, gameArea, ball, paddleLeft, paddleRight, ballElement, paddleLeftElement, paddleRightElement) {
