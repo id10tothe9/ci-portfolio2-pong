@@ -43,8 +43,44 @@ function startGame(gameObjects) {
     setTimeout(function () {
         // Set start position of ball and add momentum to its object
         ball = startBall(gameObjects, ...gameObjects);
+        // Give computer control of the left paddle
+        let idsComputer = startComputerPlayer(gameObjects, ...gameObjects);
+
     }, 4000);
 
+}
+
+function startComputerPlayer(gameObjects, gameArea, ball, paddleLeft, paddleRight, ballElement, paddleLeftElement, paddleRightElement) {
+    // determine Y of ball in a cyclical manner (cycle period can change with difficulty)
+    // -> move paddle in correct direction with a given speed (game difficulty)
+    // move paddle in the correct direction continuously until next direction check
+    let difficulty = 1;
+    let moveY = 0.2 * difficulty; // proportion of movement step
+    let direction = 1;
+    paddleLeft.top = parseFloat(getComputedStyle(paddleLeftElement).top);
+
+    let idDirection = setInterval(function () {
+        direction = computerCheckDirection(gameObjects, ...gameObjects);
+    }, 500);
+
+    // Computer moves the left paddle
+    let idMove = setInterval(function () {
+
+        paddleLeft.top += direction * moveY;
+        paddleLeftElement.style.top = `${paddleLeft.top}px`
+        // (don't go beyond boundaries of game area):
+
+    }, 10);
+
+    return [idDirection, idMove];
+}
+
+function computerCheckDirection(gameObjects, gameArea, ball, paddleLeft, paddleRight, ballElement, paddleLeftElement, paddleRightElement) {
+    let direction = 1;
+    let paddleLeftY = paddleLeft.top + paddleLeft.height / 2;
+    paddleLeftY < ball.top ? direction = 1 : direction = -1;
+
+    return direction;
 }
 
 function countDown() {
