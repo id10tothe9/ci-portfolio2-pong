@@ -1,16 +1,17 @@
 /** Index & Documentation
 *   
 *   1. Initiation
-*   
-*   
-*   
-*   
+*   2. Game Main Functions
+*   3. Computer Control Functions
+*   4. Player Control Functions
+*   5. Assistant Functions
+*   6. Documenting The Algorithms
 /** Index & Documentation - End ***************************************** */
 
 
 
 /** 1. Initiation ******************************************************************************* 
-*   Initiate objects and eventListeners                                                         *
+*      Initiate objects and eventListeners                                                         *
 */
 window.addEventListener('DOMContentLoaded', function () {
     // Get elements of of the gameboard as an array of objects:
@@ -25,7 +26,6 @@ window.addEventListener('DOMContentLoaded', function () {
         movePlayerPaddle(event.changedTouches[0], gameObjects, ...gameObjects);
     });
 
-
     // Initiate start button
     document.getElementById('start').addEventListener('click', function () {
         startGame(gameObjects);
@@ -35,6 +35,9 @@ window.addEventListener('DOMContentLoaded', function () {
 /** Initiation - End ***************************************** */
 
 
+/** 2. Game Main Functions ********************************************************************** 
+*      Start Game, Move Ball, End Game                                                             *
+*/
 function startGame(gameObjects) {
     // Reset timer-display
     document.getElementById('timer-display').textContent = '';
@@ -45,7 +48,6 @@ function startGame(gameObjects) {
         ball = startBall(gameObjects, ...gameObjects);
         // Give computer control of the left paddle
         let idsComputer = startComputerPlayer(gameObjects, ...gameObjects);
-
 
         let idBall = setInterval(function () {
             moveBall(gameObjects, ...gameObjects, idBall, idsComputer);
@@ -100,7 +102,6 @@ function reflectBall(ball, paddle, paddleElement) {
     return [score, ball];
 }
 
-
 function endRound(side, id1, id2, id3) {
     clearInterval(id1);
     clearInterval(id2);
@@ -115,8 +116,12 @@ function endRound(side, id1, id2, id3) {
             break;
     }
 }
+/** Game Main Functions - End **************************************************************** */
 
 
+/** 3. Computer Control Functions *************************************************************** 
+*      Move Paddle To Follw Ball                                                                *
+*/
 function startComputerPlayer(gameObjects, gameArea, ball, paddleLeft, paddleRight, ballElement, paddleLeftElement, paddleRightElement) {
     // determine Y of ball in a cyclical manner (cycle period can change with difficulty)
     // -> move paddle in correct direction with a given speed (game difficulty)
@@ -149,27 +154,11 @@ function computerCheckDirection(gameObjects, gameArea, ball, paddleLeft, paddleR
 
     return direction;
 }
+/** Computer Control Functions - End ********************************************************** */
 
-function countDown() {
-    let timerDisplay = document.getElementById('timer-display');
-    setTimeout(function () {
-        timerDisplay.textContent = '3'
-    }, 1000);
-    setTimeout(function () {
-        timerDisplay.textContent = '2'
-    }, 2000);
-    setTimeout(function () {
-        timerDisplay.textContent = '1'
-    }, 3000);
-    setTimeout(function () {
-        timerDisplay.textContent = 'GO!'
-    }, 4000);
-    setTimeout(function () {
-        timerDisplay.textContent = ''
-    }, 5000);
-}
-
-
+/** 4. Player Control Functions *************************************************************** 
+*      Move Player Paddle Along Mouse Pointer Or Touch Position                                                                *
+*/
 function movePlayerPaddle(event, gameObjects, gameArea, ball, paddleLeft, paddleRight, ballElement, paddleLeftElement, paddleRightElement) {
     // Define position inside gameboard and move paddle only within it
     let pointerInGameArea = event.clientY - gameArea.topY;
@@ -185,11 +174,13 @@ function movePlayerPaddle(event, gameObjects, gameArea, ball, paddleLeft, paddle
         paddleRightElement.style.top = `${deltaY}px`;
     }
 }
+/** Player Control Functions - End ********************************************************** */
 
 
-/** Assistant Functions *************************************************
-*    Functions related to getting and setting dimensions and positions  *
-*    of elements on the gameboard.                                      *
+
+
+/** 5. Assistant Functions ******************************************************************* *
+*      Get Elements, Position Ball, Count Down                                                   *
 */
 function getGameObjects() {
     //Get dimensions of the elements in the game
@@ -239,4 +230,41 @@ function startBall(gameObjects, gameArea, ball, paddleLeft, paddleRight, ballEle
 
     return ball;
 }
-  /** Assistant Functions - End ***************************************** */
+
+function countDown() {
+    let timerDisplay = document.getElementById('timer-display');
+    setTimeout(function () {
+        timerDisplay.textContent = '3'
+    }, 1000);
+    setTimeout(function () {
+        timerDisplay.textContent = '2'
+    }, 2000);
+    setTimeout(function () {
+        timerDisplay.textContent = '1'
+    }, 3000);
+    setTimeout(function () {
+        timerDisplay.textContent = 'GO!'
+    }, 4000);
+    setTimeout(function () {
+        timerDisplay.textContent = ''
+    }, 5000);
+}
+/** Assistant Functions - End **************************************************************** */
+
+
+
+/** 6. Documenting The Algorithms ******************************************************************* *
+*   + The paddles and the ball are defined as div elements, each within a
+*   separate div element. They are positioned relatively to their parent
+*   divs and moved using the .top and .left positioon properties.
+*   + The movement of the mouse pointer and touch position are determined
+*   using the .clientY property of their movement event. This is given
+*   relative to the browser window, therefor we determine absolute position
+*   of game-board element and set their .top property relative to the
+*   boundaries of game-board.
+*   + Since the position of the ball is calculated
+*   relative to the game area div, the top and bottom boundaries will
+*   simply be detected when top or bottom properties of the ball get
+*   into negative territory.
+*/
+/** Documenting The Algorithms - End ************************************************************ */
