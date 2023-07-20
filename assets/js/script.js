@@ -100,6 +100,23 @@ function moveBall(gameObjects,gameArea,ball,paddleLeft,paddleRight,ballElement,p
     return [score, ball];
   }
 
+
+  function endRound(side,id1,id2,id3) {
+    clearInterval(id1);
+    clearInterval(id2);
+    clearInterval(id3);
+    let score = document.getElementById('timer-display');
+    switch (side) {
+      case 'right':
+        score.textContent = 'Computer Wins!';
+        break;
+      case 'left':
+        score.textContent = 'You Win!'
+        break;
+    }
+  }
+  
+
 function startComputerPlayer(gameObjects, gameArea, ball, paddleLeft, paddleRight, ballElement, paddleLeftElement, paddleRightElement) {
     // determine Y of ball in a cyclical manner (cycle period can change with difficulty)
     // -> move paddle in correct direction with a given speed (game difficulty)
