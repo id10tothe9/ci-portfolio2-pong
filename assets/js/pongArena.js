@@ -8,7 +8,7 @@
 *   6. Documenting The Algorithms
 /** Index & Documentation - End ***************************************** */
 
-    
+
 
 /** 1. Initiation ******************************************************************************* 
 *      Initiate objects and eventListeners                                                         *

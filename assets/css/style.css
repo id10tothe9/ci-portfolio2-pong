@@ -1,99 +1,56 @@
 body {
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+/* Homepage CSS Settings */
+
+
+
+/* Pong Arena CSS Settings */
+#gameboard {
+  width: 90vw;
+  border: 0.5vw solid black;
+  margin: 0 auto;
+  display: flex;
+
+  body {
     text-align: center;
   }
-  
+
   #gameboard {
     width: 90vw;
     border: 0.5vw solid black;
     margin: 0 auto;
-    display: flex;body {
-      text-align: center;
-    }
-    
-    #gameboard {
-      width: 90vw;
-      border: 0.5vw solid black;
-      margin: 0 auto;
-      display: flex;
-    }
-    
-    #gameboard > div {
-      height: 70vh;
-      border: none;
-      display: inline-block;
-      position: relative;
-    }
-    
-    #left-area {
-      width: 5%;
-      background-color: blue;
-    }
-    
-    #game-area {
-      width: 90%;
-      background-color: yellow;
-    }
-    
-    #right-area {
-      width: 5%;
-      background-color: green;
-    }
-    
-    #ball {
-      width: 1vw;
-      height: 1vw;
-      border-radius: 50%;
-      background: black;
-      position: absolute;
-      display: none;
-    }
-    
-    .paddle {
-      width: 1vw;
-      height: 10vh;
-      background: black;
-      position: absolute;
-    }
-    
-    #paddle-left {
-      right: 0%;
-      top: 3%;
-    }
-    
-    #paddle-right {
-      left: 0%;
-      top: 3%;
-    }
-    
-    #timer-display {
-      font-size: 7vw;
-      position: absolute;
-      top: 30%;
-    }
+    display: flex;
   }
-  
-  #gameboard > div {
+
+  #gameboard>div {
     height: 70vh;
     border: none;
     display: inline-block;
     position: relative;
   }
-  
+
   #left-area {
     width: 5%;
     background-color: blue;
   }
-  
+
   #game-area {
     width: 90%;
     background-color: yellow;
   }
-  
+
   #right-area {
     width: 5%;
     background-color: green;
   }
-  
+
   #ball {
     width: 1vw;
     height: 1vw;
@@ -102,26 +59,81 @@ body {
     position: absolute;
     display: none;
   }
-  
+
   .paddle {
     width: 1vw;
     height: 10vh;
     background: black;
     position: absolute;
   }
-  
+
   #paddle-left {
     right: 0%;
     top: 3%;
   }
-  
+
   #paddle-right {
     left: 0%;
     top: 3%;
   }
-  
+
   #timer-display {
     font-size: 7vw;
     position: absolute;
     top: 30%;
   }
+}
+
+#gameboard>div {
+  height: 70vh;
+  border: none;
+  display: inline-block;
+  position: relative;
+}
+
+#left-area {
+  width: 5%;
+  background-color: blue;
+}
+
+#game-area {
+  width: 90%;
+  background-color: yellow;
+}
+
+#right-area {
+  width: 5%;
+  background-color: green;
+}
+
+#ball {
+  width: 1vw;
+  height: 1vw;
+  border-radius: 50%;
+  background: black;
+  position: absolute;
+  display: none;
+}
+
+.paddle {
+  width: 1vw;
+  height: 10vh;
+  background: black;
+  position: absolute;
+}
+
+#paddle-left {
+  right: 0%;
+  top: 3%;
+}
+
+#paddle-right {
+  left: 0%;
+  top: 3%;
+}
+
+#timer-display {
+  font-size: 7vw;
+  position: absolute;
+  top: 30%;
+}
