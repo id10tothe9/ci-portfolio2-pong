@@ -18,13 +18,21 @@ a {
 .btn-intro {
   float: left;
   width: 50%;
+  height: 10%;
 }
-/* 
+
 .intro-box {
+  width: 100%;
+  height: 90%;
+  margin: auto;
+  border: 1px solid black;
 
-} */
+}
 
-
+#btn-play {
+  width: 50%;
+  height: 10%;
+}
 
 /* Pong Arena CSS Settings */
 #gameboard {
