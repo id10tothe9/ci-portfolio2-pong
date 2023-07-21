@@ -15,6 +15,11 @@ a {
   border: 1px solid black;
 }
 
+.btn-intro {
+  float: left;
+  width: 50%;
+}
+
 
 
 /* Pong Arena CSS Settings */
