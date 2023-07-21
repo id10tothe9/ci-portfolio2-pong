@@ -15,10 +15,15 @@ a {
   border: 1px solid black;
 }
 
+#btns-div {
+  width: 100%;
+  height: 10%;
+}
+
 .btn-intro {
   float: left;
   width: 50%;
-  height: 10%;
+  height: 100%;
 }
 
 .intro-box {
@@ -26,8 +31,15 @@ a {
   height: 90%;
   margin: auto;
   border: 1px solid black;
-
 }
+
+.text-box {
+  border: 1px solid black;
+  width: 85%;
+  margin: auto;
+  margin-top: 20%;
+}
+
 
 #btn-play {
   width: 50%;
