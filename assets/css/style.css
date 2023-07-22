@@ -88,6 +88,7 @@ a {
   width: 60vw;
   height: 70vh;
   border: 0.5vw solid black;
+  background-color: black;
   margin: auto;
   display: flex;
 }
@@ -101,24 +102,21 @@ a {
 
 #left-area {
   width: 5%;
-  background-color: blue;
 }
 
 #game-area {
   width: 90%;
-  background-color: yellow;
 }
 
 #right-area {
   width: 5%;
-  background-color: green;
 }
 
 #ball {
   width: 1vw;
   height: 1vw;
   border-radius: 50%;
-  background: black;
+  background: white;
   position: absolute;
   display: none;
 }
@@ -126,7 +124,7 @@ a {
 .paddle {
   width: 1vw;
   height: 10vh;
-  background: black;
+  background: white;
   position: absolute;
 }
 
@@ -142,6 +140,7 @@ a {
 
 #timer-display {
   font-size: 7vw;
+  color: white;
   position: absolute;
   top: 30%;
 }
