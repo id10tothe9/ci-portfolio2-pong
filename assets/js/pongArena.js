@@ -27,7 +27,7 @@ window.addEventListener('DOMContentLoaded', function () {
     });
 
     // Initiate start button
-    document.getElementById('start').addEventListener('click', function () {
+    document.getElementById('start-btn').addEventListener('click', function () {
         startGame(gameObjects);
     });
 
