@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="stylesheet" href="assets/css/style.css">
+  <script src="https://kit.fontawesome.com/ca223ab029.js" crossorigin="anonymous"></script>
   <title>Pong Game</title>
 </head>
 
@@ -36,18 +37,29 @@
     </div>
 
     <div class="intro-box" id="howto-box">
+      <!-- (to do) control positioning of the text-box with JS in order to center vertically -->
       <div class="text-box">
-        <!-- (to do) control positioning of the text paragraphs with JS  in order to center vertically -->
         <p class="intro-text" id="howto-pt1">this is the first part of the rulebook. It might be a long text and it might be a short text.</p>
         <p class="intro-text" id="howto-pt2" style="display: none;">this is the second part of the rulebook</p>
         <p class="intro-text" id="howto-pt3" style="display: none;">this is the third part of the rulebook</p>
       </div>
       <div class="nav-box">
-        <div id="arrow-left"></div>
-        <div id="bullet1"></div>
-        <div id="bullet2"></div>
-        <div id="bullet3"></div>
-        <div id="arrow-right"></div>
+        <button id="arrow-left">
+          <i class="fa-solid fa-circle-chevron-left"></i>
+        </button>
+        <div id="bullet1">
+          <!-- change to solid via JS to indicate activation -->
+          <i class="fa-regular fa-circle"></i>
+        </div>
+        <div id="bullet2">
+          <i class="fa-regular fa-circle"></i>
+        </div>
+        <div id="bullet3">
+          <i class="fa-regular fa-circle"></i>
+        </div>
+        <button id="arrow-right">
+          <i class="fa-solid fa-circle-chevron-right"></i>
+        </button>
       </div>
     </div>
 
