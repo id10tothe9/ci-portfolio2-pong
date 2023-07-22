@@ -81,11 +81,10 @@ a {
 *
 */
 #controls-div {
-  width: 60vw;
+  width: 45vw;
   height: 4vh;
-  margin: 4vh auto 0vh auto;
+  margin: 10vh auto 0vh auto;
 }
-
 
 #start-btn {
   width: 10vw;
@@ -97,10 +96,17 @@ a {
   height: 100%;
 }
 
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
 
 #gameboard {
   width: 60vw;
-  height: 70vh;
+  height: 60vh;
   border: 0.5vw solid black;
   background-color: black;
   margin: auto;
