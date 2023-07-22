@@ -63,6 +63,19 @@ a {
   bottom: 8%;
 }
 
+.nav-elements-container {
+  border: 1px solid black;
+  width: 50%;
+  height: 100%;
+  margin: auto;
+}
+
+.nav-element {
+  display: inline-block;
+  height: 60%;
+  margin: 4%;
+}
+
 
 /* Pong Arena CSS Settings */
 #gameboard {
