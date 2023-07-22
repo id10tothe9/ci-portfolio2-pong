@@ -7,7 +7,11 @@ a {
 }
 
 
-/* Homepage CSS Settings */
+/** Homepage CSS Settings ******
+*
+*/
+
+/* Divs & Buttons Styling */
 #intro-div {
   width: 50vw;
   height: 50vh;
@@ -40,11 +44,18 @@ a {
   margin-top: 20%;
 }
 
+.text-box p {
+  padding: 1%;
+}
 
 #btn-play {
   width: 50%;
   height: 10%;
 }
+
+/* Nav Box Styling */
+
+
 
 /* Pong Arena CSS Settings */
 #gameboard {
