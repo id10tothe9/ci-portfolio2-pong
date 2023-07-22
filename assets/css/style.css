@@ -164,3 +164,16 @@ a {
   position: absolute;
   top: 30%;
 }
+
+form * {
+  display: block;
+  width: 90%;
+  margin: auto;
+}
+
+form input {
+  width: 60%;
+  margin-top: 1vh;
+  margin-bottom: 2vh;
+}
+

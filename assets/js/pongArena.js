@@ -31,6 +31,11 @@ window.addEventListener('DOMContentLoaded', function () {
         startGame(gameObjects);
     });
 
+    // Initialise settings button
+    document.getElementById('settings-btn').addEventListener('click', function () {
+        document.getElementById('game-settings-dialog').showModal();
+    });
+
 });
 /** Initiation - End ***************************************** */
 
