@@ -77,4 +77,18 @@ window.addEventListener('DOMContentLoaded', function () {
     }
   });
 
+  storyArrowRight.addEventListener('click', function(event) {
+    for (let i = 1; i >= 0; i--) {
+      if (storyBullets[i].classList.contains('fa-solid')) {
+        storyBullets[i].classList.remove('fa-solid');
+        storyBullets[i].classList.add('fa-regular');
+        storyPts[i].style.display = 'none';
+        storyBullets[i+1].classList.remove('fa-regular');
+        storyBullets[i+1].classList.add('fa-solid');
+        storyPts[i+1].style.display = '';
+      }
+    }
+  });
+
+
 });
