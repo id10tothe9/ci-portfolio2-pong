@@ -7,6 +7,11 @@ body {
   background-size: 100% 100%; Credit: ChatGPT4 */
 }
 
+.btn {
+  background-color: white;
+  color: black;
+}
+
 /* #home {
   text-decoration: none;
   color: white;
@@ -70,8 +75,6 @@ img {
   float: left;
   width: 50%;
   height: 100%;
-  background-color: white;
-  color: black;
 }
 
 .intro-box {
