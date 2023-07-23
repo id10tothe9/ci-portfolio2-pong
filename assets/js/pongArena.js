@@ -64,6 +64,7 @@ window.addEventListener('DOMContentLoaded', function () {
         name = input.value;
         if (name != '' && expertise != '') {
           document.getElementById('playerName').textContent = `${name}`;
+          gameObjects[1].expertise = `${expertise}`;
           dialog.close();
         }
       });
