@@ -59,6 +59,14 @@ window.addEventListener('DOMContentLoaded', function () {
         input.value = names[i];
       });
 
+      enterBtn.addEventListener("click", (e) => {
+        e.preventDefault(); // Avoid submitting this fake form
+        name = input.value;
+        if (name != '' && expertise != '') {
+          dialog.close();
+        }
+      });
+
 });
 /** Initiation - End ***************************************** */
 
