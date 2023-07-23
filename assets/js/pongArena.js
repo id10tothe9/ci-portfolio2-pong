@@ -31,11 +31,19 @@ window.addEventListener('DOMContentLoaded', function () {
         startGame(gameObjects);
     });
 
-    // Initialise settings button
+    // Initialise settings button (code written with help from MDN: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog)
+    const dialog = document.getElementById('game-settings-dialog');
+    const select = dialog.querySelector("select");
+    const input = dialog.querySelector("input");
+    const randomBtn = document.getElementById('random-name');
+    const enterBtn = document.getElementById('enter-btn');
+    let name = '';
+    let expertise = '';
+  
     document.getElementById('settings-btn').addEventListener('click', function () {
-        document.getElementById('game-settings-dialog').showModal();
+        dialog.showModal();
     });
-
+    
 });
 /** Initiation - End ***************************************** */
 
