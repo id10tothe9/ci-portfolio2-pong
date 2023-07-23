@@ -1,6 +1,6 @@
 /** Index & Documentation
 *   
-*   1. Initiation
+*   1. Initialisation
 *   2. Game Main Functions
 *   3. Computer Control Functions
 *   4. Player Control Functions
@@ -10,8 +10,8 @@
 
 
 
-/** 1. Initiation ******************************************************************************* 
-*      Initiate objects and eventListeners                                                         *
+/** 1. Initialisation *****************************************************
+*   Initialise objects and eventListeners                                 *
 */
 window.addEventListener('DOMContentLoaded', function () {
     // Get elements of of the gameboard as an array of objects:
@@ -70,7 +70,7 @@ window.addEventListener('DOMContentLoaded', function () {
       });
 
 });
-/** Initiation - End ***************************************** */
+/** Initialisation - End ***************************************** */
 
 
 /** 2. Game Main Functions ********************************************************************** 
