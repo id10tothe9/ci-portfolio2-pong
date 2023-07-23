@@ -77,9 +77,9 @@ a {
 }
 
 /* Activated Buttons Styling */
-/* .active {
-
-} */
+.active {
+  background-color: cornflowerblue;
+}
 
 
 
