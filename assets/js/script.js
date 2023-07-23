@@ -9,10 +9,10 @@ window.addEventListener('DOMContentLoaded', function () {
   let howtoBoxStyle = window.getComputedStyle(howtoBox);
 
   storyBtn.addEventListener('click', function (event) {
-    if (!this.classList.contains('active')) { // credit: property .contains and condition negation from ChatGPT4
+    if (!this.classList.contains('activeBtn')) { // credit: property .contains and condition negation from ChatGPT4
       // Credit: idea to change class of active button and how to do it from ChatGPT4
-      this.classList.add('active');
-      howtoBtn.classList.remove('active');
+      this.classList.add('activeBtn');
+      howtoBtn.classList.remove('activeBtn');
       // Credit: getting and removing property value from ChatGPT4
       if (storyBoxStyle.getPropertyValue('display') === 'none') {
         storyBox.style.display = '';
@@ -22,10 +22,10 @@ window.addEventListener('DOMContentLoaded', function () {
   });
 
   howtoBtn.addEventListener('click', function (event) {
-    if (!this.classList.contains('active')) { // credit: property .contains and condition negation from ChatGPT4
+    if (!this.classList.contains('activeBtn')) { // credit: property .contains and condition negation from ChatGPT4
       // Credit: idea to change class of active button and how to do it from ChatGPT4
-      this.classList.add('active');
-      storyBtn.classList.remove('active');
+      this.classList.add('activeBtn');
+      storyBtn.classList.remove('activeBtn');
       // Credit: getting and removing property value from ChatGPT4
       if (howtoBoxStyle.getPropertyValue('display') === 'none') {
         howtoBox.style.display = '';
