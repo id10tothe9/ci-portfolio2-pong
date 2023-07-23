@@ -77,8 +77,12 @@ a {
 }
 
 /* Activated Buttons Styling */
-.active {
+.activeBtn {
   background-color: cornflowerblue;
+}
+
+.activeBullet {
+  
 }
 
 
