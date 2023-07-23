@@ -2,9 +2,9 @@ body {
   height: 100vh;
   color: white;
   text-align: center;
-  /* background-image: url("/assets/images/arcade.png");
+  background-image: url("/assets/images/arcade.png");
   background-repeat: no-repeat;
-  background-size: 100% 100%; Credit: ChatGPT4 */
+  background-size: 100% 100%; /* Credit: ChatGPT4 */
 }
 
 .btn {
