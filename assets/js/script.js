@@ -34,6 +34,18 @@ window.addEventListener('DOMContentLoaded', function () {
     }
   });
 
+  // Get text part elements
+  let storyPts = [
+    document.getElementById('story-pt1'),
+    document.getElementById('story-pt2'),
+    document.getElementById('story-pt3'),
+  ];
+  let howtoPts = [
+    document.getElementById('howto-pt1'),
+    document.getElementById('howto-pt2'),
+    document.getElementById('howto-pt3'),
+  ];
+
   // Get navigation elements
   let storyArrowLeft = document.getElementById('story-arrow-left');
   let storyBullets = [
@@ -53,7 +65,16 @@ window.addEventListener('DOMContentLoaded', function () {
 
 
   storyArrowLeft.addEventListener('click', function(event) {
-
+    for (let i = 1; i < 3; i++) {
+      if (storyBullets[i].classList.contains('fa-solid')) {
+        storyBullets[i].classList.remove('fa-solid');
+        storyBullets[i].classList.add('fa-regular');
+        storyPts[i].style.display = 'none';
+        storyBullets[i-1].classList.remove('fa-regular');
+        storyBullets[i-1].classList.add('fa-solid');
+        storyPts[i-1].style.display = '';
+      }
+    }
   });
 
 });
