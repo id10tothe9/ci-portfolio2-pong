@@ -90,5 +90,31 @@ window.addEventListener('DOMContentLoaded', function () {
     }
   });
 
+  howtoArrowLeft.addEventListener('click', function(event) {
+    for (let i = 1; i < 3; i++) {
+      if (howtoBullets[i].classList.contains('fa-solid')) {
+        howtoBullets[i].classList.remove('fa-solid');
+        howtoBullets[i].classList.add('fa-regular');
+        howtoPts[i].style.display = 'none';
+        howtoBullets[i-1].classList.remove('fa-regular');
+        howtoBullets[i-1].classList.add('fa-solid');
+        howtoPts[i-1].style.display = '';
+      }
+    }
+  });
+
+  howtoArrowRight.addEventListener('click', function(event) {
+    for (let i = 1; i >= 0; i--) {
+      if (howtoBullets[i].classList.contains('fa-solid')) {
+        howtoBullets[i].classList.remove('fa-solid');
+        howtoBullets[i].classList.add('fa-regular');
+        howtoPts[i].style.display = 'none';
+        howtoBullets[i+1].classList.remove('fa-regular');
+        howtoBullets[i+1].classList.add('fa-solid');
+        howtoPts[i+1].style.display = '';
+      }
+    }
+  });
+
 
 });
