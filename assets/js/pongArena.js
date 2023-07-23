@@ -43,7 +43,15 @@ window.addEventListener('DOMContentLoaded', function () {
     document.getElementById('settings-btn').addEventListener('click', function () {
         dialog.showModal();
     });
-    
+
+    select.addEventListener("change", (e) => {
+        expertise = select.value;
+        // Reset expertise if default selected to avoid an error
+        if (expertise === 'default') {
+          expertise = '';
+        }
+      });
+
 });
 /** Initiation - End ***************************************** */
 
