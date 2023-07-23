@@ -36,18 +36,24 @@ window.addEventListener('DOMContentLoaded', function () {
 
   // Get navigation elements
   let storyArrowLeft = document.getElementById('story-arrow-left');
-  let storyBullet1 = document.getElementById('story-arrow-left');
-  let storyBullet2 = document.getElementById('story-arrow-left');
-  let storyBullet3 = document.getElementById('story-arrow-left');
-  let storyArrowRight = document.getElementById('story-arrow-left');
-  let howtoArrowLeft = document.getElementById('story-arrow-left');
-  let howtoBullet1 = document.getElementById('story-arrow-left');
-  let howtoBullet2 = document.getElementById('story-arrow-left');
-  let howtoBullet3 = document.getElementById('story-arrow-left');
-  let howtoArrowRight = document.getElementById('story-arrow-left');
+  let storyBullets = [
+    document.getElementById('story-bullet1'),
+    document.getElementById('story-bullet2'),
+    document.getElementById('story-bullet3'),
+  ];
+  let storyArrowRight = document.getElementById('story-arrow-right');
+  let howtoArrowLeft = document.getElementById('howto-arrow-left');
+  let howtoBullets = [
+    document.getElementById('howto-bullet1'),
+    document.getElementById('howto-bullet2'),
+    document.getElementById('howto-bullet3'),
+  ];
+  let howtoArrowRight = document.getElementById('howto-arrow-right');
+  // Get number of currently active bullet and text part
+
 
   storyArrowLeft.addEventListener('click', function(event) {
-    
+
   });
 
 });
