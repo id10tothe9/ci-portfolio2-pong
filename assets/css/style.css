@@ -177,3 +177,7 @@ form input {
   margin-bottom: 2vh;
 }
 
+form #random-name {
+  width: fit-content;
+  display: inline-block;
+}
