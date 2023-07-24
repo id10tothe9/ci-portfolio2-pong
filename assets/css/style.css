@@ -4,7 +4,7 @@ body {
   height: 100vh;
   color: white;
   text-align: center;
-  background-image: url("../images/arcade.png");
+  background-image: url("../images/arcadePongArena.png");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   font-family: 'Noto Sans Cypro Minoan', 'Lato', sans-serif;
@@ -17,7 +17,7 @@ h1 {
 
 h3 {
   font-size: 2vh;
-  margin: 1vh 18vw;
+  margin: 3.5vh 18vw;
   text-align: justify;
 }
 
@@ -33,12 +33,7 @@ a {
   color: white;
 }
 
-.door-sign {
-  text-decoration: none;
-  position: absolute;
-  font-size: 2.5vh;
-  font-weight: bold;
-}
+
 
 #home {
   top: 20%;
@@ -67,7 +62,7 @@ a:visited {
 }
 
 img {
-  width: 15vw;
+  width: 20vw;
   position: absolute;
   right: 1vw;
   bottom: 2vh;
