@@ -41,6 +41,8 @@ window.addEventListener('DOMContentLoaded', function () {
     document.getElementById('howto-pt1'),
     document.getElementById('howto-pt2'),
     document.getElementById('howto-pt3'),
+    document.getElementById('howto-pt4'),
+    document.getElementById('howto-pt5'),
   ];
 
   // Get navigation elements
@@ -57,6 +59,8 @@ window.addEventListener('DOMContentLoaded', function () {
     document.getElementById('howto-bullet1'),
     document.getElementById('howto-bullet2'),
     document.getElementById('howto-bullet3'),
+    document.getElementById('howto-bullet4'),
+    document.getElementById('howto-bullet5'),
   ];
   let howtoArrowRight = document.getElementById('howto-arrow-right');
   // Get number of currently active bullet and text part
@@ -89,7 +93,7 @@ window.addEventListener('DOMContentLoaded', function () {
   });
 
   howtoArrowLeft.addEventListener('click', function(event) {
-    for (let i = 1; i < 3; i++) {
+    for (let i = 1; i < 5; i++) {
       if (howtoBullets[i].classList.contains('fa-solid')) {
         howtoBullets[i].classList.remove('fa-solid');
         howtoBullets[i].classList.add('fa-regular');
@@ -102,7 +106,7 @@ window.addEventListener('DOMContentLoaded', function () {
   });
 
   howtoArrowRight.addEventListener('click', function(event) {
-    for (let i = 1; i >= 0; i--) {
+    for (let i = 3; i >= 0; i--) {
       if (howtoBullets[i].classList.contains('fa-solid')) {
         howtoBullets[i].classList.remove('fa-solid');
         howtoBullets[i].classList.add('fa-regular');
