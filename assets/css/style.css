@@ -33,7 +33,13 @@ a {
   color: white;
 }
 
-
+.door-sign {
+  width: 8vh;
+  height: 10vh;
+  position: absolute;
+  top: 13%;
+  /* background-color: black; */
+}
 
 #home {
   top: 20%;
