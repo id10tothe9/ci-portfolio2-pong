@@ -63,7 +63,7 @@ window.addEventListener('DOMContentLoaded', function () {
         e.preventDefault(); // Avoid submitting this fake form
         name = input.value;
         if (name != '' && expertise != '') {
-          document.getElementById('playerName').textContent = `${name}`;
+          document.getElementById('player-name').textContent = `${name}`;
           gameObjects[1].expertise = `${expertise}`;
           dialog.close();
         }

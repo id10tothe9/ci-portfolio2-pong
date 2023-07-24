@@ -169,12 +169,14 @@ img {
   height: 100%;
 }
 
-.float-left {
+#computer-name {
   float: left;
+  font-size: 2vh;
 }
 
-.float-right {
+#player-name {
   float: right;
+  font-size: 2vh;
 }
 
 #gameboard {
