@@ -4,10 +4,19 @@ body {
   height: 100vh;
   color: white;
   text-align: center;
-  background-image: url("/assets/images/arcade.png");
+  background-image: url("../images/arcade.png");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   font-family: 'Noto Sans Cypro Minoan', 'Lato', sans-serif;
+}
+
+h1 {
+  font-size: 6vh;
+  margin: 4vh auto;
+}
+
+h3 {
+  margin: 2vh auto;
 }
 
 .btn {
@@ -22,21 +31,24 @@ a {
   color: white;
 }
 
-#home {
+.door-sign {
   text-decoration: none;
   position: absolute;
-  top: 13vh;
-  left: 5vw;
-  rotate: 22deg;
+  font-size: 4vh;
+  font-weight: bold;
+}
+
+#home {
+  top: 11%;
+  left: 6%;
+  rotate: 15deg;
   transform: skew(15deg, 0deg);
 }
 
 #pong-arena {
-  text-decoration: none;
-  position: absolute;
-  top: 10vh;
-  left: 5vw;
-  rotate: 22deg;
+  top: 8%;
+  left: 6vw;
+  rotate: 15deg;
   transform: skew(15deg, 0deg);
 }
 
