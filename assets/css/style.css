@@ -5,6 +5,7 @@ body {
   background-image: url("/assets/images/arcade.png");
   background-repeat: no-repeat;
   background-size: 100% 100%;
+  font-size: large;
 }
 
 .btn {
@@ -90,7 +91,7 @@ img {
 .text-box {
   width: 85%;
   margin: auto;
-  margin-top: 20%;
+  margin-top: 12%;
 }
 
 .text-box p {
