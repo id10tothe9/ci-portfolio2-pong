@@ -39,6 +39,7 @@ window.addEventListener('DOMContentLoaded', function () {
     document.getElementById('story-pt1'),
     document.getElementById('story-pt2'),
     document.getElementById('story-pt3'),
+    document.getElementById('story-pt4'),
   ];
   let howtoPts = [
     document.getElementById('howto-pt1'),
@@ -52,6 +53,7 @@ window.addEventListener('DOMContentLoaded', function () {
     document.getElementById('story-bullet1'),
     document.getElementById('story-bullet2'),
     document.getElementById('story-bullet3'),
+    document.getElementById('story-bullet4'),
   ];
   let storyArrowRight = document.getElementById('story-arrow-right');
   let howtoArrowLeft = document.getElementById('howto-arrow-left');
@@ -65,7 +67,7 @@ window.addEventListener('DOMContentLoaded', function () {
 
 
   storyArrowLeft.addEventListener('click', function(event) {
-    for (let i = 1; i < 3; i++) {
+    for (let i = 1; i < 4; i++) {
       if (storyBullets[i].classList.contains('fa-solid')) {
         storyBullets[i].classList.remove('fa-solid');
         storyBullets[i].classList.add('fa-regular');
@@ -78,7 +80,7 @@ window.addEventListener('DOMContentLoaded', function () {
   });
 
   storyArrowRight.addEventListener('click', function(event) {
-    for (let i = 1; i >= 0; i--) {
+    for (let i = 2; i >= 0; i--) {
       if (storyBullets[i].classList.contains('fa-solid')) {
         storyBullets[i].classList.remove('fa-solid');
         storyBullets[i].classList.add('fa-regular');

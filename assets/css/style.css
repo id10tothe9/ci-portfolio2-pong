@@ -13,9 +13,12 @@ body {
   border: none;
 }
 
+a {
+  color: white;
+}
+
 #home {
   text-decoration: none;
-  color: white;
   position: absolute;
   top: 13vh;
   left: 5vw;
@@ -25,7 +28,6 @@ body {
 
 #pong-arena {
   text-decoration: none;
-  color: white;
   position: absolute;
   top: 10vh;
   left: 5vw;
