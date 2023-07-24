@@ -4,10 +4,19 @@ body {
   height: 100vh;
   color: white;
   text-align: center;
-  background-image: url("../images/arcadePongArena.png");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   font-family: 'Noto Sans Cypro Minoan', 'Lato', sans-serif;
+}
+
+#body-pong-arena {
+  background-image: url("../images/arcadeHome.png");
+
+}
+
+#body-home {
+  background-image: url("../images/arcadePongArena.png");
+
 }
 
 h1 {
@@ -159,29 +168,40 @@ img {
 *
 */
 #controls-div {
-  width: 45vw;
+  width: 60vw;
   height: 4vh;
   margin: 10vh auto 0vh auto;
+  font-size: 1.8vh;
+  background-color: black;
+  border: 1px solid white;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  padding: 0px;
 }
 
 #start-btn {
-  width: 10vw;
+  width: 100%;
   height: 100%;
+  padding: 0px;
+  line-height: 1;
+  font-size: 1.8vh;
 }
 
 #settings-btn {
-  width: 3vw;
+  width: 100%;
   height: 100%;
+  font-size: 1.8vh;
+  padding: 0px;
 }
 
 #computer-name {
   float: left;
-  font-size: 2vh;
+  padding: 1vh;
 }
 
 #player-name {
   float: right;
-  font-size: 2vh;
+  padding: 1vh;
 }
 
 #gameboard {

@@ -10,7 +10,7 @@
   <title>Pong Game</title>
 </head>
 
-<body>
+<body id="body-pong-arena">
   <h1>Pong Arena</h1>
   <h3>Welcome To The Arcades Of The 70s!</h3>
   <a id="home" href="index.html">
@@ -19,12 +19,12 @@
   <img id="cabinet" src="assets/images/cabinet_bw.png">
 
   <div id="controls-div">
-    <span id="computer-name">Computer</span>
-    <button class="btn" id="start-btn">Start Game</button>
-    <button class="btn" id="settings-btn">
+    <span class="grid-item" id="computer-name">Computer</span>
+    <button class="grid-item" class="btn" id="start-btn">Start Game</button>
+    <button class="grid-item" class="btn" id="settings-btn">
       <i class="fa-solid fa-gear"></i>
     </button>
-    <span id="player-name">Player</span>
+    <span class="grid-item" id="player-name">Player</span>
   </div>
   <div id="gameboard">
     <div id="left-area">
