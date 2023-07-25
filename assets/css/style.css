@@ -597,5 +597,39 @@ form #random-name {
   display: flex;
 }
 
+dialog {
+  width: 30%;
+  position: absolute;
+  top: 15vh;
+}
+
+dialog * {
+  font-size: 1.8vh;
+}
+
+form * {
+  display: block;
+  width: 100%;
+  margin: auto;
+  padding-top: 0.8vh;
+  padding-bottom: 0.8vh;
+}
+
+form input {
+  width: 60%;
+  margin-top: 1vh;
+  margin-bottom: 2vh;
+}
+
+form #random-name {
+  width: fit-content;
+  display: inline-block;
+  margin-top: 1vh;
+}
+
+#enter-btn {
+  margin: 1vh auto;
+}
+
 }
 
