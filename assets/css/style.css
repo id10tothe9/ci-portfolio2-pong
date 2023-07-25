@@ -440,7 +440,7 @@ option {
 
 .paddle {
   width: 1vw;
-  height: 12h;
+  height: 12vh;
   background: white;
   position: absolute;
 }
@@ -643,7 +643,7 @@ form #random-name {
 
 .paddle {
   width: 1vw;
-  height: 12h;
+  height: 12vh;
   background: white;
   position: absolute;
 }
