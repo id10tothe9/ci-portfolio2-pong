@@ -54,12 +54,6 @@ window.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    // randomBtn.addEventListener("click", (e) => {
-    //     e.preventDefault(); // Avoid submitting this fake form
-    //     let i = Math.floor(Math.random() * 10);
-    //     let names = ['Pixel Puncher', 'Retro Rider', 'Paddle Prodigy', 'Bit Blaster', 'Console Commander', 'Pong Pioneer', 'Byte Buffoon', 'Gameboard Goofball', 'Retro Raccoon', 'Bit Baboon'];
-    //     input.value = names[i];
-    // });
 
     enterBtn.addEventListener("click", (e) => {
         e.preventDefault(); // Avoid submitting this fake form
@@ -93,8 +87,7 @@ function startGame(gameObjects) {
             moveBall(gameObjects, ...gameObjects, idBall, idsComputer);
         }, 1);
 
-        // }, 4000);
-    }, 0);
+        }, 4000);
 
 }
 
@@ -302,7 +295,6 @@ function startBall(gameObjects, gameArea, ball, paddleLeft, paddleRight, ballEle
     let y = gameArea.height / gameArea.width * x; // giving the ball a 45 degrees angle
     ball.x = x;
     ball.y = y;
-    // ball.y = 0.05;
 
     return ball;
 }

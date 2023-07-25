@@ -49,26 +49,26 @@ For the gameboard area, the font 'Press Start 2P' was employed. This font closel
 #### Landing Page:
 - **Title & Subtitle:**
 The homepage showcases a title displaying the game's name and a subtitle that clearly communicates the website's purpose to the user.
-![Title & Subtitle]()
+![Title & Subtitle](/assets/images/screenshots/titleAndSubtitle.png)
 
 - **Information Panel:**
 An interactive interface is provided. It features two buttons on top that allow the user to navigate between their subjects. Clicking on one, activates it visually by switching its colour to black and activating its section for the user to see.
-![Navigation Buttons]()
+![Navigation Buttons](/assets/images/screenshots/topButtons.png)
 
 A navigation bar is placed underneath the text section which allows the user to navigate between the slides of each section.
-![Navigation Bar]()
+![Navigation Bar](/assets/images/screenshots/nav.png)
 
 A button invites the user to click on it to navigate to the game page and start playing.
-![Game Button]()
+![Game Button](/assets/images/screenshots/playButton.png)
 
 #### The Pong Arena page:
 A heading bar over the gameboard provides the user with the names of the players and a button to start the game.
-![Gameboard Info]()
+![Gameboard Info](/assets/images/screenshots/gameboardNav.png)
 
 The gameboard is entirely black with a defining white boundary to resemble the simple early displays. It features two paddles on each side, one is controlled by the computer and the other by the player.
 
 Underneath the gameboard a settings button is positioned. Clicking on it opens a dialog for the user to choose a level of difficulty for the game. The user can click Enter to confirm his choice or cancel to get back to the game without a change.  Clicking Enter will not work if no choice was selected.
-![Gameboard And Settings Button]()
+![Gameboard And Settings Button](/assets/images/screenshots/gameboard.png)
 
 #### Functionality of the program:
 - By using event listeners, the user paddle responds to the movement of the mouse pointer inside the gameboard, as well as finger touch and movement on a touchscreen.
@@ -108,8 +108,9 @@ Pong Arena | Feedback after a round is over | yes
 
 **Validator Testing:**
 - CSS Validator: No Issues
-![CSS Validator]()
+![CSS Validator](/assets/images/validator/cssValidation.png)
 - HTML Validator: No Issues
+![HTML Validator](/assets/images/validator/htmlValidation.png)
 - JSHint: No Errors
 
 ## Credits
