@@ -25,7 +25,7 @@ In the first section (default view), users are introduced to the game's history 
 Additionally, for easy and intuitive navigation, the user can click on a door sign link placed over the arcade door background image to switch between the two pages.
 
 #### Skeleton:
-The ![Miro](https://miro.com/) app was used to create the wireframes of both pages in order to decide how the layout of the pages should look like:
+The <a href="https://www.miro.com" target="_blank">Miro</a> app was used to create the wireframes of both pages in order to decide how the layout of the pages should look like:
 
 - Homepage:
 
@@ -115,5 +115,5 @@ Pong Arena | Feedback after a round is over | yes
 
 ## Credits
 - AI was used to generate the Arcade background image.
-- Documentations of ![MDN](https://developer.mozilla.org/en-US/docs) and ![W3schools](https://www.w3schools.com/) were relied upon, in addition to other online forums and documentations.
-- ![Tinypng](https://tinypng.com/) for image compression.
+- Documentations of <a href="https://developer.mozilla.org/en-US/docs" target="_blank">MDN</a> and <a href="https://www.w3schools.com/" target="_blank">W3schools</a> were relied upon, in addition to other online forums and documentations.
+- <a href="https://tinypng.com/" target="_blank">Tinypng</a> for image compression.
