@@ -166,6 +166,10 @@ img {
 /* Pong Arena CSS Settings *******
 *
 */
+.atari-font {
+  font-family: 'Press Start 2P', cursive;
+}
+
 #controls-div {
   width: 80vw;
   height: 4vh;

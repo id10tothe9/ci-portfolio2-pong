@@ -18,12 +18,12 @@
   </a>
   <img id="cabinet" src="assets/images/cabinet_bw.png">
 
-  <div id="controls-div">
+  <div class="atari-font" id="controls-div">
     <span id="computer-name">Computer</span>
-    <button class="btn" id="start-btn">Start Game</button>
+    <button class="btn atari-font" id="start-btn">Start Game</button>
     <span id="player-name">Player</span>
   </div>
-  <div id="gameboard">
+  <div class="atari-font" id="gameboard">
     <div id="left-area">
       <div class="paddle" id="paddle-left"></div>
     </div>
@@ -42,19 +42,19 @@
 
   <!-- Game settings dialog -->
   <dialog id="game-settings-dialog">
-    <form>
+    <form class="atari-font">
       <div>
-        <label for="name">Enter Your Name Or <button id="random-name">Choose Random</button> :</label>
-        <input id="name">
+        <label for="name">Enter Your Name Or <button class="atari-font" id="random-name">Choose Random</button>:</label>
+        <input class="atari-font" id="name">
 
-        <select>
-          <option value="default">Level Of Expertise...</option>
-          <option>Easy</option>
-          <option>Moderate</option>
-          <option>Advanced</option>
+        <select class="atari-font">
+          <option class="atari-font" value="default">Level Of Expertise...</option>
+          <option class="atari-font">Easy</option>
+          <option class="atari-font">Moderate</option>
+          <option class="atari-font">Advanced</option>
         </select>
 
-        <button class="btn" id="enter-btn">Enter</button>
+        <button class="atari-font" class="btn" id="enter-btn">Enter</button>
       </div>
     </form>
   </dialog>
