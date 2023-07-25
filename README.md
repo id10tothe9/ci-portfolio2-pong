@@ -47,39 +47,39 @@ For the gameboard area, the font 'Press Start 2P' was employed. This font closel
 ## Features
 ### General Design
 #### Landing Page:
-- **Title & Subtitle:**
-The homepage showcases a title displaying the game's name and a subtitle that clearly communicates the website's purpose to the user.
+- Title & Subtitle:
+The homepage showcases a title displaying the game's name and a subtitle that clearly communicates the website's purpose to the user:
 ![Title & Subtitle](/assets/images/screenshots/titleAndSubtitle.png)
 
-- **Information Panel:**
-An interactive interface is provided. It features two buttons on top that allow the user to navigate between their subjects. Clicking on one, activates it visually by switching its colour to black and activating its section for the user to see.
+- Information Panel:
+An interactive interface is provided. It features two buttons on top that allow the user to navigate between their subjects. Clicking on one, activates it visually by switching its colour to black and activating its section for the user to see:
 ![Navigation Buttons](/assets/images/screenshots/topButtons.png)
 
-A navigation bar is placed underneath the text section which allows the user to navigate between the slides of each section.
+- A navigation bar is placed underneath the text section which allows the user to navigate between the slides of each section:
 ![Navigation Bar](/assets/images/screenshots/nav.png)
 
-A button invites the user to click on it to navigate to the game page and start playing.
+- A button invites the user to click on it to navigate to the game page and start playing:
 ![Game Button](/assets/images/screenshots/playButton.png)
 
 #### The Pong Arena page:
-A heading bar over the gameboard provides the user with the names of the players and a button to start the game.
+- A heading bar over the gameboard provides the user with the names of the players and a button to start the game:
 ![Gameboard Info](/assets/images/screenshots/gameboardNav.png)
 
-The gameboard is entirely black with a defining white boundary to resemble the simple early displays. It features two paddles on each side, one is controlled by the computer and the other by the player.
+- The gameboard is entirely black with a defining white boundary to resemble the simple early displays. It features two paddles on each side, one is controlled by the computer and the other by the player.
 
-Underneath the gameboard a settings button is positioned. Clicking on it opens a dialog for the user to choose a level of difficulty for the game. The user can click Enter to confirm his choice or cancel to get back to the game without a change.  Clicking Enter will not work if no choice was selected.
+- Underneath the gameboard a settings button is positioned. Clicking on it opens a dialog for the user to choose a level of difficulty for the game. The user can click Enter to confirm his choice or cancel to get back to the game without a change.  Clicking Enter will not work if no choice was selected:
 ![Gameboard And Settings Button](/assets/images/screenshots/gameboard.png)
 
 #### Functionality of the program:
 - By using event listeners, the user paddle responds to the movement of the mouse pointer inside the gameboard, as well as finger touch and movement on a touchscreen.
-- If the ball moves into the sections beyond the paddles the player loses.
+- If the ball moves into the sections beyond the paddles the player loses the round.
 - The gameboard features a countdown in its center that starts counting after the player clicks start, after the count down of three seconds is over the ball appears and the game can begin.
 - Throughout the scripts, I avoided using global variables as advised in the course.
 
 #### Features Left To Implement:
-- Show current level of difficulty
-- Show current score and winning or losing the game after 11 points
-- Stopping the paddles short before the edges.
+- Show current level of difficulty.
+- Show current score and winning or losing the game after 11 points.
+- Stopping the paddles short before the edges as in the original game.
 - After first game, start button becomes a play again button.
 
 
@@ -90,19 +90,19 @@ Page | Functionality | Success
 Homepage | Switching between the two sections of the information panel | yes
 Homepage | Navigating the slides of the information panel forward and backward | yes
 Homepage | Bullets show slide progress correctly | yes
-Homepage | clicking on 'Let Me Play!' button takes me to Pong Arena | yes
+Homepage | Clicking on 'Let Me Play!' button takes me to Pong Arena | yes
 Homepage | Clicking on door sign link takes me to Pong Arena | yes
-Pong Arena | Clicking 'Start Game Button' starts the game | yes
+Pong Arena | Clicking 'Start Game' button starts the game | yes
 Pong Arena | Countdown before game starts working | yes
 Pong Arena | Player paddle responds to mouse movement and touch | yes
 Pong Arena | Computer moves the paddle and responds to ball movement | yes
-Pong Arena | Ball speeds up after a given number ball bouncing | yes
+Pong Arena | Ball speeds up after a given number ball bounces | yes
 Pong Arena | Clicking the settings button opens a dialog | yes
 Pong Arena | Computer playing improves with increasing difficulty | yes
 Pong Arena | Feedback after a round is over | yes
 
 **Problems that need solving:**
-- To choose a difficulty, the word itself must be clicked. Centering the text in the options of the select item is not straight forward.
+- To choose a difficulty, the word itself must be clicked inside the dropdown menu. Centering the text in the dropdown menu is not straight forward.
 - It seems calling the moveBall function every 1ms is not working as fast as intended, the ball isn't as fast as should be so I multiplied its speed by a factor.
 - Text in span after game over is not centered.
 
@@ -114,6 +114,7 @@ Pong Arena | Feedback after a round is over | yes
 - JSHint: No Errors
 
 ## Credits
-- AI was used to generate the Arcade background image.
+- Media: AI tool <a href="https://openai.com/dall-e-2" target="_blank">DALL-E 2</a> was used to generate the Arcade background image and the authentic Pong Cabinet was taken from <a href="https://en.wikipedia.org/wiki/Pong" target="_blank">Wikipedia</a>.
 - Documentations of <a href="https://developer.mozilla.org/en-US/docs" target="_blank">MDN</a> and <a href="https://www.w3schools.com/" target="_blank">W3schools</a> were relied upon, in addition to other online forums and documentations.
 - <a href="https://tinypng.com/" target="_blank">Tinypng</a> for image compression.
+- Text editing with AI tool provided by <a href="www.clickup.com" target="_blank">ClickUp</a>.
