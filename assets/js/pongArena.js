@@ -39,7 +39,7 @@ window.addEventListener('DOMContentLoaded', function () {
     const enterBtn = document.getElementById('enter-btn');
     let name = '';
     let expertise = '';
-  
+
     document.getElementById('settings-btn').addEventListener('click', function () {
         dialog.showModal();
     });
@@ -48,26 +48,28 @@ window.addEventListener('DOMContentLoaded', function () {
         expertise = select.value;
         // Reset expertise if default selected to avoid an error
         if (expertise === 'default') {
-          expertise = '';
+            expertise = '';
+        } else {
+            gameObjects = setDifficulty(expertise, ...gameObjects);
         }
-      });
+    });
 
-      randomBtn.addEventListener("click", (e) => {
-        e.preventDefault(); // Avoid submitting this fake form
-        let i = Math.floor(Math.random() * 10);
-        let names = ['Pixel Puncher', 'Retro Rider', 'Paddle Prodigy', 'Bit Blaster', 'Console Commander', 'Pong Pioneer', 'Byte Buffoon', 'Gameboard Goofball', 'Retro Raccoon', 'Bit Baboon'];
-        input.value = names[i];
-      });
+    // randomBtn.addEventListener("click", (e) => {
+    //     e.preventDefault(); // Avoid submitting this fake form
+    //     let i = Math.floor(Math.random() * 10);
+    //     let names = ['Pixel Puncher', 'Retro Rider', 'Paddle Prodigy', 'Bit Blaster', 'Console Commander', 'Pong Pioneer', 'Byte Buffoon', 'Gameboard Goofball', 'Retro Raccoon', 'Bit Baboon'];
+    //     input.value = names[i];
+    // });
 
-      enterBtn.addEventListener("click", (e) => {
+    enterBtn.addEventListener("click", (e) => {
         e.preventDefault(); // Avoid submitting this fake form
-        name = input.value;
-        if (name != '' && expertise != '') {
-          document.getElementById('player-name').textContent = `${name}`;
-          gameObjects[1].expertise = `${expertise}`;
-          dialog.close();
+        // name = input.value;
+        // if (name != '' && expertise != '') {
+        if (expertise != '') {
+            // document.getElementById('player-name').textContent = `${name}`;
+            dialog.close();
         }
-      });
+    });
 
 });
 /** Initialisation - End ***************************************** */
@@ -91,7 +93,8 @@ function startGame(gameObjects) {
             moveBall(gameObjects, ...gameObjects, idBall, idsComputer);
         }, 1);
 
-    }, 4000);
+        // }, 4000);
+    }, 0);
 
 }
 
@@ -134,8 +137,17 @@ function reflectBall(ball, paddle, paddleElement) {
     let paddleBottom = paddleTop + paddle.height;
     if (ball.top >= paddleTop && ball.top <= paddleBottom) {
         ball.x *= -1;
+        ball.reflect++;
+        if (ball.reflect % 1 === 0) { // Increase speed every four reflections
+            ball.x = ball.x * 1.5;
+            ball.y = ball.y * 1.5;
+            console.log(ball.x, ball.y);
+        }
+        console.log('reflected', ball.reflect);
+        console.log(ball.reflect % 4 === 0);
     } else {
         score = 'yes';
+        ball.reflect = 0;
     }
     return [score, ball];
 }
@@ -164,14 +176,13 @@ function startComputerPlayer(gameObjects, gameArea, ball, paddleLeft, paddleRigh
     // determine Y of ball in a cyclical manner (cycle period can change with difficulty)
     // -> move paddle in correct direction with a given speed (game difficulty)
     // move paddle in the correct direction continuously until next direction check
-    let difficulty = 1;
-    let moveY = 0.2 * difficulty; // proportion of movement step
+    let moveY = 1 * paddleLeft.difficulty; // proportion of movement step
     let direction = 1;
     paddleLeft.top = parseFloat(getComputedStyle(paddleLeftElement).top);
 
     let idDirection = setInterval(function () {
         direction = computerCheckDirection(gameObjects, ...gameObjects);
-    }, 500);
+    }, 10 / paddleLeft.difficulty);
 
     // Computer moves the left paddle
     let idMove = setInterval(function () {
@@ -236,6 +247,10 @@ function getGameObjects() {
     // get absolute Y coordinate of gameArea to calculate relative pointer position in movePlayerPaddle
     gameArea.topY = gameAreaElement.getBoundingClientRect().top;
 
+    // Set difficulty to easy in case no option selected
+    paddleLeft.difficulty = 2;
+
+
     return [gameArea, ball, paddleLeft, paddleRight, ballElement, paddleLeftElement, paddleRightElement];
 }
 
@@ -248,6 +263,25 @@ function getDimensions(divElement) {
     return div;
 }
 
+
+function setDifficulty (expertise,gameArea,ball,paddleLeft,paddleRight,ballElement,paddleLeftElement,paddleRightElement) {
+    // Set difficulty of game (affects speed of computer paddle and reactivity)
+    switch (expertise) {
+        case 'Easy':
+            paddleLeft.difficulty = 2;
+            break;
+        case 'Moderate':
+            paddleLeft.difficulty = 4;
+            break;
+        case 'Advanced':
+            paddleLeft.difficulty = 6;
+            break;
+
+    }
+    console.log(expertise, paddleLeft.difficulty);
+    return [gameArea,ball,paddleLeft,paddleRight,ballElement,paddleLeftElement,paddleRightElement];
+}
+
 // Set position and momentum of ball at start of the game
 function startBall(gameObjects, gameArea, ball, paddleLeft, paddleRight, ballElement, paddleLeftElement, paddleRightElement) {
     // Position the ball at the middle top of the gameArea
@@ -258,13 +292,17 @@ function startBall(gameObjects, gameArea, ball, paddleLeft, paddleRight, ballEle
     // Make ball visible
     ballElement.style.display = 'block';
 
+    // Add a counter property for number of ball reflections
+    ball.reflect = 0;
+
     // Give ball object its momentum as x,y in pixel (with 0 defined
     // at top left of the gameArea) and ball moving diagonally
-    let x = 0.2;
-    let y = gameArea.height / gameArea.width * x;
+    let speed = gameArea.width / 2 / 1000 * 1.5; // speed in px/ms in order for ball to cross half width in a second (multiplied by a factor because it seems the function isn't called every 1ms as programmed.)
+    let x = speed;
+    let y = gameArea.height / gameArea.width * x; // giving the ball a 45 degrees angle
     ball.x = x;
-    // ball.y = y;
-    ball.y = 0.05;
+    ball.y = y;
+    // ball.y = 0.05;
 
     return ball;
 }
