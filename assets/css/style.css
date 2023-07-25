@@ -236,8 +236,8 @@ img {
 }
 
 #ball {
-  width: 1vw;
-  height: 1vw;
+  width: 2vw;
+  height: 2vw;
   border-radius: 50%;
   background: white;
   position: absolute;
@@ -428,6 +428,40 @@ option {
   display: flex;
 }
 
+
+#ball {
+  width: 1.5vw;
+  height: 1.5vw;
+  border-radius: 50%;
+  background: white;
+  position: absolute;
+  display: none;
+}
+
+.paddle {
+  width: 1vw;
+  height: 12h;
+  background: white;
+  position: absolute;
+}
+
+#paddle-left {
+  right: 0%;
+  top: 3%;
+}
+
+#paddle-right {
+  left: 0%;
+  top: 3%;
+}
+
+#timer-display {
+  font-size: 4vw;
+  color: white;
+  position: absolute;
+  top: 30%;
+}
+
 dialog {
   width: 55%;
   position: absolute;
@@ -595,6 +629,40 @@ form #random-name {
   background-color: black;
   margin: auto;
   display: flex;
+}
+
+
+#ball {
+  width: 1.5vw;
+  height: 1.5vw;
+  border-radius: 50%;
+  background: white;
+  position: absolute;
+  display: none;
+}
+
+.paddle {
+  width: 1vw;
+  height: 12h;
+  background: white;
+  position: absolute;
+}
+
+#paddle-left {
+  right: 0%;
+  top: 3%;
+}
+
+#paddle-right {
+  left: 0%;
+  top: 3%;
+}
+
+#timer-display {
+  font-size: 3vw;
+  color: white;
+  position: absolute;
+  top: 30%;
 }
 
 dialog {
