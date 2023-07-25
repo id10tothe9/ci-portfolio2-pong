@@ -458,11 +458,11 @@ form #random-name {
   }
 
   .btn-intro {
-    font-size: 3vh;
+    font-size: 2.7vh;
   }
 
   #btn-play {
-    font-size: 3vh;
+    font-size: 2.7vh;
     height: 10%;
     margin-top: 1%;
   }
@@ -471,7 +471,7 @@ form #random-name {
     width: 85%;
     margin: auto;
     margin-top: 8%;
-    font-size: 3vh;
+    font-size: 2.7vh;
     line-height: 1.3;
   }
 
