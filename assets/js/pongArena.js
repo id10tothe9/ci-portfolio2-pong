@@ -162,7 +162,7 @@ function endRound(side, id1, id2, id3) {
             score.textContent = 'Computer Wins!';
             break;
         case 'left':
-            score.textContent = 'You Win!'
+            score.textContent = 'You Win!';
             break;
     }
 }
@@ -188,7 +188,7 @@ function startComputerPlayer(gameObjects, gameArea, ball, paddleLeft, paddleRigh
     let idMove = setInterval(function () {
 
         paddleLeft.top += direction * moveY;
-        paddleLeftElement.style.top = `${paddleLeft.top}px`
+        paddleLeftElement.style.top = `${paddleLeft.top}px`;
         // (don't go beyond boundaries of game area):
 
     }, 10);
@@ -288,7 +288,7 @@ function startBall(gameObjects, gameArea, ball, paddleLeft, paddleRight, ballEle
     ball.left = gameArea.width / 2 - ball.width / 2;
     ball.top = 0;
     ballElement.style.left = `${ball.left}px`;
-    ballElement.style.top = `${ball.top}px`
+    ballElement.style.top = `${ball.top}px`;
     // Make ball visible
     ballElement.style.display = 'block';
 
@@ -310,19 +310,19 @@ function startBall(gameObjects, gameArea, ball, paddleLeft, paddleRight, ballEle
 function countDown() {
     let timerDisplay = document.getElementById('timer-display');
     setTimeout(function () {
-        timerDisplay.textContent = '3'
+        timerDisplay.textContent = '3';
     }, 1000);
     setTimeout(function () {
-        timerDisplay.textContent = '2'
+        timerDisplay.textContent = '2';
     }, 2000);
     setTimeout(function () {
-        timerDisplay.textContent = '1'
+        timerDisplay.textContent = '1';
     }, 3000);
     setTimeout(function () {
-        timerDisplay.textContent = 'GO!'
+        timerDisplay.textContent = 'GO!';
     }, 4000);
     setTimeout(function () {
-        timerDisplay.textContent = ''
+        timerDisplay.textContent = '';
     }, 5000);
 }
 /** Assistant Functions - End **************************************************************** */

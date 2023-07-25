@@ -107,19 +107,12 @@ Pong Arena | Feedback after a round is over | yes
 - Text in span after game over is not centered.
 
 **Validator Testing:**
-
-
-### Home Page:
-
-
-### Look And Function On Different Browsers And Screen Sizes:
-
-
-## Validator Testing
-
+- CSS Validator: No Issues
+![CSS Validator]()
+- HTML Validator: No Issues
+- JSHint: No Errors
 
 ## Credits
-### Content & Meida
-
-
-### Knowledge
+- AI was used to generate the Arcade background image.
+- Documentations of ![MDN](https://developer.mozilla.org/en-US/docs) and ![W3schools](https://www.w3schools.com/) were relied upon, in addition to other online forums and documentations.
+- ![Tinypng](https://tinypng.com/) for image compression.
