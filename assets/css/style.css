@@ -174,7 +174,7 @@ img {
   background-color: black;
   border: 1px solid white;
   display: grid;
-  grid-template-columns: auto auto auto auto;
+  grid-template-columns: auto auto auto;
   padding: 0px;
 }
 
@@ -187,10 +187,10 @@ img {
 }
 
 #settings-btn {
-  width: 100%;
-  height: 100%;
-  font-size: 1.8vh;
-  padding: 0px;
+  width: 10%;
+  height: 4%;
+  margin-top: 0%;
+  font-size: 2vh;
 }
 
 #computer-name {
@@ -376,7 +376,7 @@ form #random-name {
   background-color: black;
   border: 1px solid white;
   display: grid;
-  grid-template-columns: auto auto auto auto;
+  grid-template-columns: auto auto auto;
   padding: 0px;
 }
 
@@ -389,10 +389,10 @@ form #random-name {
 }
 
 #settings-btn {
-  width: 100%;
-  height: 100%;
+  width: 5%;
+  height: 4%;
+  margin-top: 0%;
   font-size: 2vh;
-  padding: 0px;
 }
 
 #gameboard {
@@ -511,7 +511,7 @@ form #random-name {
   background-color: black;
   border: 1px solid white;
   display: grid;
-  grid-template-columns: auto auto auto auto;
+  grid-template-columns: auto auto auto;
   padding: 0px;
 }
 
@@ -524,10 +524,10 @@ form #random-name {
 }
 
 #settings-btn {
-  width: 60%;
-  height: 100%;
+  width: 5%;
+  height: 4%;
+  margin-top: 0%;
   font-size: 2.5vh;
-  padding: 0px;
 }
 
 #gameboard {
